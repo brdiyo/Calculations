@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int m, n , e =0 , a=1;
+	cin >> n >> m;
+	for (int i = n + 1; i < m; i++)
+	{
+		int sum = 0;
+		for (int a = 1; a <= i / 2; a++)
+		{
+
+			if (i % a == 0)
+			{
+				sum = sum + 1;
+			}
+		}
+		if (sum == 1)
+		{
+			e = e + 1;
+		}
+	}
+	for (int i = n + 1; i < m; i++)
+	{
+		int sum = 0;
+		for (int a = 1; a <= i / 2; a++)
+		{
+
+			if (i % a == 0)
+			{
+				sum = sum + 1;
+			}
+		}
+		if (sum == 1)
+		{
+			cout << i ;
+			if (a < e)
+			{
+			    cout << ",";
+			    a ++ ;
+			}
+		}
+	}
+}
